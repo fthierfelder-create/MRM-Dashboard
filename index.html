@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TOM Dashboard V0.1</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>TOM Dashboard</h1>
+    <p>MRM-basierte Management- und Auditübersicht</p>
+</header>
+
+
+<section class="data-source">
+
+    <h2>Datenquelle</h2>
+
+    <input type="file" id="fileInput" accept=".xlsx">
+
+    <p id="importStatus">
+        Keine MRM-Datei geladen
+    </p>
+<div id="mrmAnalysis">
+
+<h2>MRM Analyse</h2>
+
+<div id="sheetAnalysis">
+    Noch keine Analyse vorhanden
+</div>
+
+</div>
+</section>
+
+
+
+<section class="dashboard">
+
+
+<div class="card">
+
+    <div class="card-header">
+
+        <h3>TOM Register</h3>
+
+        <span class="help-icon"
+              onclick="openHelp(
+                'TOM Register',
+                `
+                <h3>Bedeutung</h3>
+
+                Anzahl aller TOM-Register, die aus der MRM importiert wurden.
+
+                <hr>
+
+                <h3>Berechnung</h3>
+
+                Gezählt werden alle Tabellenblätter, deren Name auf
+                <b>_REF</b> endet.
+
+                <hr>
+
+                <h3>Datenquelle</h3>
+
+                Excel-Datei (MRM)
+
+                <hr>
+
+                <h3>Nutzen</h3>
+
+                Diese Kennzahl zeigt den Umfang der dokumentierten technischen
+                und organisatorischen Maßnahmen.
+                `
+              )">
+
+            ⓘ
+
+        </span>
+
+    </div>
+
+    <p id="tomCount">0</p>
+
+</div>
+<div class="card">
+
+<h3>Nachweisquote</h3>
+
+<p id="evidenceRate">
+0 %
+</p>
+
+</div>
+
+<div class="card">
+    <h3>Maßnahmen</h3>
+    <p id="measureCount">0</p>
+</div>
+
+
+<div class="card">
+    <h3>Auditnachweise</h3>
+    <p id="evidenceCount">0</p>
+</div>
+
+
+<div class="card">
+    <h3>ISO 27001 Mapping</h3>
+    <p id="isoCount">0</p>
+</div>
+<div class="card">
+
+<h3>B3S Mapping</h3>
+
+<p id="b3sCount">
+0
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>NIS2 Mapping</h3>
+
+<p id="nis2Count">
+0
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>DSGVO Mapping</h3>
+
+<p id="dsgvoCount">
+0
+</p>
+
+</div>
+
+</section>
+
+
+<section class="compliance">
+
+<h2>Compliance Abdeckung</h2>
+
+<div id="complianceBox">
+
+    Noch keine Daten vorhanden
+
+</div>
+
+</section>
+
+
+
+<section class="tomOverview">
+
+<h2>TOM Landschaft</h2>
+
+<div id="tomOverviewBox">
+
+    Noch keine Daten vorhanden
+
+</div>
+
+</section>
+
+<section class="auditMissing">
+
+<h2>Fehlende Nachweise</h2>
+
+<div id="missingEvidenceBox">
+
+    Keine fehlenden Nachweise
+
+</div>
+
+</section>
+
+<section class="tomDetails">
+
+<h2>TOM Detailansicht</h2>
+
+<div id="tomDetailsBox">
+
+    Bitte TOM auswählen
+
+</div>
+
+</section>
+
+<section class="status">
+
+<h2>Maßnahmenstatus</h2>
+
+
+<div id="statusBox">
+
+    <p>
+        Noch keine Daten geladen
+    </p>
+
+</div>
+
+<div id="sheetAnalysis">
+    Noch keine Analyse vorhanden
+</div>
+</section>
+
+
+
+
+<section class="tom-list">
+
+<h2>TOM Übersicht</h2>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>TOM-ID</th>
+<th>Dokument</th>
+<th>Maßnahmen</th>
+<th>Verantwortlich</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="tomTable">
+
+<tr>
+<td colspan="5">
+Keine Daten vorhanden
+</td>
+</tr>
+
+</tbody>
+
+
+</table>
+
+
+</section>
+
+
+
+<footer>
+
+<p>
+TOM Dashboard V0.1 | Datenquelle MRM
+</p>
+
+</footer>
+
+
+<script src="xlsx.full.min.js"></script>
+<script src="app.js"></script>
+
+<div id="helpModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeHelp()">&times;</span>
+
+        <h2 id="helpTitle"></h2>
+
+        <div id="helpContent"></div>
+
+    </div>
+
+</div>
+</body>
+
+</html>

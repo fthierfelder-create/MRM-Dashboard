@@ -1,0 +1,465 @@
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #222;
+
+}
+
+
+header {
+
+    background: #1f4e79;
+    color: white;
+    padding: 25px;
+
+}
+
+
+header h1 {
+
+    margin: 0;
+    font-size: 32px;
+
+}
+
+
+header p {
+
+    margin-top: 8px;
+    font-size: 16px;
+
+}
+
+
+
+.data-source {
+
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+
+
+.data-source input {
+
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+
+#importStatus {
+
+    margin-top: 15px;
+    font-weight: bold;
+
+}
+
+
+
+
+.dashboard {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+    margin: 20px;
+
+}
+
+
+
+.card {
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow:
+    0 2px 6px rgba(0,0,0,0.15);
+
+    text-align: center;
+
+}
+
+
+
+.card h3 {
+
+    margin-top:0;
+    color:#555;
+
+}
+
+
+.card p {
+
+    font-size:36px;
+    font-weight:bold;
+    margin:10px;
+
+    color:#1f4e79;
+
+}
+
+
+
+
+.status {
+
+    background:white;
+    margin:20px;
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+
+
+
+#statusBox {
+
+    padding:15px;
+    background:#eef2f5;
+
+    border-radius:6px;
+
+}
+
+
+
+
+.tom-list {
+
+    background:white;
+
+    margin:20px;
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+
+
+
+table {
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+
+
+th {
+
+    background:#1f4e79;
+    color:white;
+
+    padding:12px;
+
+}
+
+
+
+td {
+
+    padding:10px;
+
+    border-bottom:
+    1px solid #ddd;
+
+}
+
+
+
+tr:hover {
+
+    background:#f1f5f8;
+
+}
+
+
+
+
+.status-green {
+
+    color:#008000;
+    font-weight:bold;
+
+}
+
+
+.status-yellow {
+
+    color:#c89000;
+    font-weight:bold;
+
+}
+
+
+.status-red {
+
+    color:#b00020;
+    font-weight:bold;
+
+}
+
+
+
+
+footer {
+
+    margin-top:30px;
+
+    padding:15px;
+
+    text-align:center;
+
+    background:#ddd;
+
+    font-size:13px;
+
+}
+#mrmAnalysis {
+
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+
+}
+
+
+.analysis-item {
+
+    padding:10px;
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.analysis-title {
+
+    font-weight:bold;
+
+}
+.compliance,
+.tomOverview {
+
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+
+}
+
+
+.bar-container {
+
+    margin:15px 0;
+
+}
+
+
+.bar-title {
+
+    font-weight:bold;
+
+    margin-bottom:5px;
+
+}
+
+
+.bar {
+
+    height:25px;
+
+    background:#1f4e79;
+
+    border-radius:5px;
+
+}
+
+
+.tom-item {
+
+    padding:10px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.tomDetails {
+
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+
+}
+
+
+.detail-item {
+
+    padding:10px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.detail-title {
+
+    font-weight:bold;
+
+}
+.detail-table table {
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+
+}
+
+
+.detail-table td {
+
+    padding:8px;
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.detail-table td:first-child {
+
+    font-weight:bold;
+    width:180px;
+
+}
+
+/* ============================
+   Hilfe-Dialog (Modal)
+============================ */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+
+.modal-content {
+
+    background: white;
+
+    width: 700px;
+
+    max-width: 90%;
+
+    margin: 60px auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+}
+
+
+.close {
+
+    float: right;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.close:hover {
+
+    color: red;
+
+}
+
+
+#helpContent {
+
+    margin-top: 20px;
+
+    line-height: 1.6;
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.help-icon{
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#1976d2;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+
+.help-icon:hover{
+
+    background:#0d47a1;
+
+}
